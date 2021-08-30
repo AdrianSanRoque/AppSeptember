@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="es.usj.section_1.adrian.appseptember.viewModels.MovieListViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".LocalMoviesList">>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_500"
+                app:title="@string/app_name"
+                app:titleTextColor="@color/white" />
+        </LinearLayout>
+
+        <!-- here we have used tab layout which shows tabs. -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_500"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="#7DC1F8">
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

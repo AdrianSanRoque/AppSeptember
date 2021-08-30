@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="es.usj.section_1.adrian.appseptember.Fragments.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_moviesFragment"
+            app:destination="@id/moviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreFragment"
+        android:name="es.usj.section_1.adrian.appseptember.Fragments.GenreFragment"
+        android:label="GenreFragment" >
+        <action
+            android:id="@+id/action_genreFragment_to_actorsFragment"
+            app:destination="@id/actorsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actorsFragment"
+        android:name="es.usj.section_1.adrian.appseptember.Fragments.ActorsFragment"
+        android:label="ActorsFragment" />
+    <fragment
+        android:id="@+id/addMovieFragment"
+        android:name="es.usj.section_1.adrian.appseptember.Fragments.AddMovieFragment"
+        android:label="AddMovieFragment" />
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="es.usj.section_1.adrian.appseptember.Fragments.MovieDetailsFragment"
+        android:label="MovieDetailsFragment" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="es.usj.section_1.adrian.appseptember.Fragments.ContactFragment"
+        android:label="ContactFragment" />
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="es.usj.section_1.adrian.appseptember.Movies.MoviesFragment"
+        android:label="MoviesFragment" >
+        <action
+            android:id="@+id/action_moviesFragment_to_addMovieFragment"
+            app:destination="@id/addMovieFragment" />
+        <action
+            android:id="@+id/action_moviesFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_moviesFragment_to_genreFragment"
+            app:destination="@id/genreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="es.usj.section_1.adrian.appseptember.Fragments.ViewPagerFragment"
+        android:label="ViewPagerFragment" />
+</navigation>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="movieDetail"
+            type="es.usj.section_1.adrian.appseptember.Models.Movie"
+            />
+        <variable
+            name="clickListener"
+            type="es.usj.section_1.adrian.appseptember.Movies.helpers.MoviesListener" />
+
+    </data>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="10dp"
+    android:onClick="@{() -> clickListener.onclick(movieDetail)}">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <io.github.florent37.shapeofview.shapes.CircleView
+            android:id="@+id/editLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:elevation="8dp"
+            >
+
+            <ImageView
+                android:id="@+id/edit_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_edit" />
+
+        </io.github.florent37.shapeofview.shapes.CircleView>
+
+        <ImageView
+            android:id="@+id/thumb_image"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="#E6E5E5"
+            android:src="@drawable/movies_icon" />
+
+        <TextView
+            android:id="@+id/movieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="title"
+            android:layout_below="@id/thumb_image"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            />
+
+
+        <TextView
+            android:id="@+id/yearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/movieTitle"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>
